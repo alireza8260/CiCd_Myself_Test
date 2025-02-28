@@ -1,5 +1,5 @@
 Feature: Application Should be work
-
+@smoke
   Scenario: simple login
     Given user should be in home page
     When user should choose "Form Authentication" page

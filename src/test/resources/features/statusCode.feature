@@ -1,5 +1,5 @@
 Feature: Status Code
-@wip
+@smoke
   Scenario:
     Given user should be in home page
     When user should choose "Status Codes" page
