@@ -24,8 +24,15 @@ public class PracticePage {
         Driver.getDriver().findElement(By.linkText(linkText)).click();
     }
     public void login(){
-        username.sendKeys(ConfigurationReader.getProperty("username"));
-        password.sendKeys(ConfigurationReader.getProperty("password"));
+//        String userName = ConfigurationReader.getProperty("username");
+//        String passWord = ConfigurationReader.getProperty("password");
+        String userName = System.getenv("USERNAME");
+        System.out.println("Username : " + userName);
+        String passWord = System.getenv("PASSWORD");
+        System.out.println("Password : " + passWord);
+        username.sendKeys(userName);
+        password.sendKeys(passWord);
+
         loginBt.click();
 
     }
